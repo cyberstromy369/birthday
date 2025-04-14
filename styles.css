@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  cursor: url('https://cdn.custom-cursor.com/db/6411/32/mouse-pointer.png'), auto;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #4b2c5e; /* Deep plum */
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+  animation: fadeInDown 1s ease-out;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+#countdown {
+  font-size: 1.2rem;
+  color: #562b63; /* Slightly darker shade */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 80%;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 15px;
+  transition: 0.3s;
+  color: #333;
+  background-color: #fff;
+}
+
+input[type="text"]:focus {
+  border-color: #a18cd1;
+  box-shadow: 0 0 5px #a18cd1;
+}
+
+button {
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #f857a6, #ff5858);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 88, 88, 0.4);
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #5d1049; /* Berry red */
+  font-weight: bold;
+  animation: fadeInUp 1s ease-in;
+}
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 34px;
+    display: block;
+    cursor: pointer;
+    transition: background 0.4s;
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #333;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+  
+  body.dark {
+    background: #111;
+    color: #eee;
+  }
+  .star {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #fff, #ff8);
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle 0.6s ease-out;
+  }
+  
+  @keyframes sparkle {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+  .star {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff, #ff8);
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkle 0.6s ease-out;
+}
+
+@keyframes sparkle {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Animations */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

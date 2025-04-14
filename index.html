@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="/Birthday/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday Countdown</h1>
+        <p id="countdown"></p>
+        <input type="text" id="nameInput" placeholder="Enter Your Name">
+        <button id="startButton">Get Your Birthday Wish</button>
+        <p id="message"></p>
+        <label class="switch">
+            <input type="checkbox" id="modeToggle">
+            <span class="slider"></span>
+          </label>
+          <div id="card" style="display:none; margin-top:20px;">
+            <h2 id="cardName"></h2>
+            <p id="cardWish"></p>
+          </div>
+          
+    <script src="/Birthday/script.js" defer></script>
+    
+</body>
+</html>
