@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateCountdown() {
       const now = new Date();
-      const birthday = new Date("2026-03-28T00:00:00");
+      const birthday = new Date("2026-02-23T00:00:00");
 
       let timeDiff = birthday - now;
 
@@ -96,4 +96,5 @@ modeToggle.addEventListener("change", () => {
   document.body.classList.toggle("dark");
 });
 });
+
 
